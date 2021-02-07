@@ -1,0 +1,51 @@
+.page-header {
+    width: 100%;
+    height: 40px;
+}
+
+.page-header-tab {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    padding-top: 5px;
+    color: #FDE1B8;
+    overflow-x: scroll;
+}
+
+.page-header-tab::-webkit-scrollbar { 
+    display: none 
+}
+
+.page-header-tab-list {
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    line-height: 30px;
+}
+
+.page-header-tab-list > div:first-child {
+    margin-left: 10px;
+}
+
+.page-header-tab-list > div:last-child {
+    margin-right: 10px;
+}
+
+.page-header-tab-list-item {
+    font-family: PingFang SC;
+    font-weight: 300;
+    padding: 0 8px;
+    margin-left: 10px;
+}
+
+.page-header-tab-current-item {
+    background-color: #ffffff;
+    color: #E85655;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.page-header-tab-list > li:first-child {
+    margin-left: 0;
+}

@@ -1,0 +1,19 @@
+.switch-top > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.25s;
+}
+
+.switch-top-current-item {
+    transform: translate3d(0, 0, 0);
+}
+
+.switch-top-next-item {
+    transform: translate3d(0, 100%, 0);
+}
+
+.switch-top-pre-item {
+    opacity: 0.5;
+    transform: translate3d(0, -8px, 0) scale(0.95, 1);
+}

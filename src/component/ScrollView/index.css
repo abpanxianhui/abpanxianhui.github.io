@@ -1,0 +1,10 @@
+.scroll_view_x {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scroll_view_x::-webkit-scrollbar { 
+    display: none;
+}
