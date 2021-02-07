@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import Abbreviation from "./Abbreviation";
+import SwitchItem from "./SwitchItem";
 import Switch from "../Switch";
 import "./index.css";
 
@@ -61,35 +62,7 @@ class LeftSwitch extends PureComponent {
                         onTouchMove={this.handleTouchMove}
                         onChange={this.handleChange}
                     >
-                        {data?.commodityList?.map((item, index) => {
-                            return (
-                                <div
-                                    style={{ transform: `translate3d(${index * 100}%, 0, 0)` }}
-                                    className="commodity_list_item"
-                                    key={item.id}
-                                >
-                                    <div className="commodity_list_img" >
-                                        <img src={item.img} alt={item.comment} />
-                                    </div>
-                                    <div className="commodity_list_text">
-                                        <div className="commodity_list_text_title">
-                                            <p>品牌</p><p>{item.brand}</p>
-                                        </div>
-                                        <div className="commodity_list_text_comment">
-                                            <p>
-                                                <img src={item.userImg} alt={item.comment} />
-                                            </p>
-                                            <p>{item.comment}</p>
-                                        </div>
-                                        <div className="commodity_list_text_pay">
-                                            <div className="commodity_list_text_pay_button">
-                                                ¥ {item.money} 了解它
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
+                        {data?.commodityList?.map((item, index) => <SwitchItem index={index} data={item} />)}
                     </Switch>
                 </div>
 
