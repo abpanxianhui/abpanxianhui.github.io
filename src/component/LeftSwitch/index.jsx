@@ -61,9 +61,10 @@ class LeftSwitch extends PureComponent {
                         onTouchMove={this.handleTouchMove}
                         onChange={this.handleChange}
                     >
-                        {data?.commodityList?.map(item => {
+                        {data?.commodityList?.map((item, index) => {
                             return (
                                 <div
+                                    style={{ transform: `translate3d(${index * 100}%, 0, 0)` }}
                                     className="commodity_list_item"
                                     key={item.id}
                                 >

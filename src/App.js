@@ -27,7 +27,7 @@ class App extends Component {
                 <PageHeader data={tabList} currentTabIndex={currentTabIndex} onChange={this.handleClicTab} />
                 {/* 上下切换 */}
                 <div className="switch-box">
-                    <TopSwitch style={{ width: '95vw', height: '86vh' }} itemPosition="2vh">
+                    <TopSwitch style={{ width: '95vw', height: '87%' }} itemPosition="2vh">
                         {
                             listData?.map((item) => {
                                 return this.renderItem(item);

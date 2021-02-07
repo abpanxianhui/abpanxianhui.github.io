@@ -14,6 +14,11 @@ class Switch extends PureComponent {
     position = 0;
 
     handleTouchStart = (e) => {
+        if (e.touches.lenght > 0) {
+            e.preventDefault()
+            return;
+        }
+
         this.starPosition = {
             left: e.touches[0].clientX,
             top: e.touches[0].clientY
@@ -21,6 +26,15 @@ class Switch extends PureComponent {
     }
 
     handleTouchMove = (e) => {
+        if (e.touches.lenght > 0) {
+            e.preventDefault()
+            return;
+        }
+
+        if (!this.starPosition) {
+            return
+        }
+
         const { currentIndex } = this.props;
 
         this.endPosition = {
